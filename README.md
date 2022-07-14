@@ -18,7 +18,7 @@ Note: Đây không phải là 1 kiểu biến: #{var} biến nội suy
 4. Symbol
 - Giống String nhưng không thể thay đổi từng giá trị trong chuối symbol
 - Các object_id(địa chỉ ô nhớ) của symbol không bao giờ thay đổi sau mỗi lần khởi tạo, còn string thì có
-- Khai báo: 
+- Khai báo:
 + :symbol
 + :"symbol"
 + "string".to_sym
@@ -45,7 +45,7 @@ Note: Đây không phải là 1 kiểu biến: #{var} biến nội suy
 7. Conditional
 - False, nil ~ false
 - 0, anything else ~ true
-- If condition then #do end, if condition elsif #do else #do end. Short if: [code] if condition 
+- If condition then #do end, if condition elsif #do else #do end. Short if: [code] if condition
 - Toán tử 3 ngôi ?
 - Unless ngược lại với if. Short unless: [code] if unless
 - Case when: case expression [when expression, [expression ...] [then] #do [else #do] end, expression có thể là 1 biến (có thể kiểm tra giá trị của nó hoặc kiểu của nó) hoặc 1 expression (biểu thức)
@@ -74,7 +74,7 @@ Note: Đây không phải là 1 kiểu biến: #{var} biến nội suy
 - get information of array: .length, .empty?, .any?, .include? value (kiểm tra chứa value không)
 - Manipulate: push hoặc <<, unshift, insert(index, value), pop, shift(index),delete_at(index), uniq! (trả về array gốc có unique value), uniq(trả về copy array có unique value). compact (trả về copy array loại bỏ nin), compact! (trả về array gốc loại bỏ nin). docs
 - Interator: .each, .reverse_each, map, map! nếu thay đổi luôn array gốc, select, select!, reject (copy array đã loại bỏ các phần tử thỏa mãn điều kiện), reject!(trả về array gốc)
-- Other: .shuffle (xáo trộn mảng), .sort, .reverse, .sample (lấy về phần tử ngẫu nhiên), .max, .min, freeze (đóng băng mảng, không thay đổi được) 
+- Other: .shuffle (xáo trộn mảng), .sort, .reverse, .sample (lấy về phần tử ngẫu nhiên), .max, .min, freeze (đóng băng mảng, không thay đổi được)
 
 10. Hash
 - Mảng key-value mà key riêng biệt. Giống array nhưng index có thể là bất kì kiểu gì. Truy cập đến key không tồn tại -> trả về nil, Có thử tự là các key được truyền vào. Key của hash nên là symbol
@@ -130,7 +130,9 @@ Note: Đây không phải là 1 kiểu biến: #{var} biến nội suy
 
 - Module có thể chứa cả instance method, class method. Với class method thì phải dùng cả tên Module để gọi trong khi instance method có thể dùng kĩ thuật mixin
 
-- Kĩ thuật mixin: include Module -> khi 1 module được include vào bên trong Class thì Class có thể access các method của module (chỉ instance method)
+- Kĩ thuật mixin:
++ include Module -> khi 1 module được include vào bên trong Class thì Class có thể access các method của module (chỉ instance method)
++ extend: giống include nhưng là biến các instance method của module thành class method của nó, ngoài ra có thể dùng instance của 1 class extend Module -> khi đó nó có thể sử dụng instance method của Module đó
 
 - Namespace: 1 cách xây dựng các đối tượng xung đột có thể tồn tại cùng nhau. VD: Namespace::Class
 
@@ -139,14 +141,13 @@ Note: Đây không phải là 1 kiểu biến: #{var} biến nội suy
 - Có thể lồng các module với nhau: Namespace1::Namespace2::... với Namespace là 1 module, class hoặc là 1 biến nào đó. gọi hàm thì dùng "."
 
 - Included callback: định nghĩa module chung sẽ được include vào trong các class khác
-- extend: giống include nhưng là biến các instance method của module thành class method của nó, ngoài ra có thể dùng instance của 1 class extend Module -> khi đó nó có thể sử dụng instance method của Module đó
 - extend callback: định nghĩa module chung sẽ được extend vào trong class khác
 
 14. Exception
-- begin #do resuce #do else #do [ensure #do] end. ensure luôn chạy
-- Tạo các exception block và dùng lại
-
-15. Regular expression ~ pattern 
+- begin #do resuce #do else #n block và dùng lại
+do [ensure #do] end. ensure luôn chạy
+- Tạo các exceptio
+15. Regular expression ~ pattern
 - khai báo: /regex/, %r|regex|
 - Kiểm tra regex: =~ /.../
 - Expression modifier: /.../modifier. modifier có thể là:

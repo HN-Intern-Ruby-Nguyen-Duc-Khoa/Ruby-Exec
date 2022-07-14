@@ -19,16 +19,16 @@ class Box
     end
 
     #class method
-    def self.method1 
+    def self.method1
         p ""
     end
 
-    def Box.method2 
+    def Box.method2
         p ""
     end
 
     class << self
-        def method3 
+        def method3
             p ""
         end
     end
@@ -69,9 +69,9 @@ class GoodDog < Animal
     end
     def speak
         p "#{self.name} says arf!"
-    end    
+    end
 end
-    
+
 class Cat < Animal
 
 end
@@ -82,5 +82,3 @@ puts sparky.speak
     # => Sparky says arf!
 puts paws.speak
     # => Hello!
-
-
